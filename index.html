@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Gafar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-blue-600">Portfolio</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition">Accueil</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition">À propos</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600 transition">Compétences</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition">Projets</a>
+                    <a href="#education" class="nav-link text-gray-700 hover:text-blue-600 transition">Parcours</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Accueil</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">À propos</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Compétences</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Projets</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Parcours</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Bonjour, je suis <span class="text-blue-200">Jean Dupont</span></h1>
+                    <div class="typewriter text-xl md:text-2xl mb-6">Étudiant en Génie Logiciel, Réseaux & Systèmes</div>
+                    <p class="text-lg mb-8">Passionné par le développement logiciel, les réseaux informatiques et la cybersécurité. Je cherche à appliquer mes connaissances académiques à des projets concrets.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition">Me contacter</a>
+                        <a href="#projects" class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition">Voir mes projets</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-blue-400 rounded-full opacity-20 blur-xl"></div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                             alt="Photo de profil" 
+                             class="relative z-10 w-full h-full object-cover rounded-full border-4 border-white floating">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">À propos de moi</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                             alt="Étudiant en informatique" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Étudiant passionné par les technologies</h3>
+                    <p class="text-gray-600 mb-6">
+                        Actuellement en première année de Génie Logiciel, Réseaux et Systèmes, je me spécialise dans le développement d'applications, l'administration réseau et la sécurité informatique. Mon parcours académique me permet d'acquérir des compétences techniques solides tout en développant une approche méthodique de résolution de problèmes.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-graduation-cap text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Formation</h4>
+                                <p class="text-sm text-gray-600">Université de Technologie</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Localisation</h4>
+                                <p class="text-sm text-gray-600">Paris, France</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email</h4>
+                                <p class="text-sm text-gray-600">jean.dupont@email.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Téléphone</h4>
+                                <p class="text-sm text-gray-600">+33 6 12 34 56 78</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition flex items-center">
+                            <i class="fas fa-download mr-2"></i> Télécharger CV
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-50 transition flex items-center">
+                            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mes compétences</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Développement Logiciel -->
+                <div class="skill-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-code text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Développement Logiciel</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Java</span>
+                                <span class="text-sm font-medium text-gray-500">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Python</span>
+                                <span class="text-sm font-medium text-gray-500">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">C++</span>
+                                <span class="text-sm font-medium text-gray-500">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Développement Web -->
+                <div class="skill-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-globe text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Développement Web</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">HTML/CSS</span>
+                                <span class="text-sm font-medium text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">JavaScript</span>
+                                <span class="text-sm font-medium text-gray-500">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">PHP</span>
+                                <span class="text-sm font-medium text-gray-500">60%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Réseaux & Systèmes -->
+                <div class="skill-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-network-wired text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Réseaux & Systèmes</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Administration Linux</span>
+                                <span class="text-sm font-medium text-gray-500">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Réseaux TCP/IP</span>
+                                <span class="text-sm font-medium text-gray-500">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Sécurité Informatique</span>
+                                <span class="text-sm font-medium text-gray-500">60%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                    <i class="fab fa-java text-4xl text-blue-600 mb-2"></i>
+                    <span class="text-sm font-medium">Java</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                    <i class="fab fa-python text-4xl text-blue-600 mb-2"></i>
+                    <span class="text-sm font-medium">Python</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                    <i class="fab fa-html5 text-4xl text-blue-600 mb-2"></i>
+                    <span class="text-sm font-medium">HTML5</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                    <i class="fab fa-css3-alt text-4xl text-blue-600 mb-2"></i>
+                    <span class="text-sm font-medium">CSS3</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                    <i class="fab fa-js text-4xl text-blue-600 mb-2"></i>
+                    <span class="text-sm font-medium">JavaScript</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                    <i class="fab fa-linux text-4xl text-blue-600 mb-2"></i>
+                    <span class="text-sm font-medium">Linux</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                    <i class="fas fa-database text-4xl text-blue-600 mb-2"></i>
+                    <span class="text-sm font-medium">SQL</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                    <i class="fab fa-git-alt text-4xl text-blue-600 mb-2"></i>
+                    <span class="text-sm font-medium">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mes projets</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projet 1 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Application de gestion" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Application de gestion</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Java</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Application de gestion d'inventaire développée en Java avec interface graphique Swing et base de données MySQL.</p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Voir le projet
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 2 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" 
+                             alt="Site web portfolio" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Site web portfolio</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">HTML/CSS/JS</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Site web portfolio responsive développé avec HTML5, CSS3 et JavaScript vanilla. Animation et design moderne.</p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Voir le projet
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                             alt="Analyseur réseau" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Analyseur réseau</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Python</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Outil d'analyse réseau développé en Python avec Scapy pour capturer et analyser les paquets réseau.</p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Voir le projet
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Jeu 2D" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Jeu 2D</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">C++</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Jeu vidéo 2D développé en C++ avec la bibliothèque SFML. Moteur de jeu personnalisé avec gestion des collisions.</p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Voir le projet
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 5 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555774698-0f77e70ac5f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Application mobile" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Application mobile</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Flutter</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Application mobile multiplateforme développée avec Flutter pour la gestion des tâches quotidiennes.</p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Voir le projet
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 6 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Système de fichiers" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-gray-800">Système de fichiers</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">C</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Système de fichiers simplifié développé en C pour comprendre le fonctionnement des systèmes d'exploitation.</p>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Voir le projet
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition">
+                    <i class="fas fa-plus mr-2"></i> Voir plus de projets
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mon parcours</h2>
+            
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-caveat font-medium text-xl text-blue-600 mb-1">2023 - Présent</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <h3 class="text-xl font-semibold text-gray-800">Licence en Génie Logiciel, Réseaux et Systèmes</h3>
+                </div>
+                <div class="text-gray-600 mb-4">Université de Technologie - Paris</div>
+                <p class="text-gray-600">Formation pluridisciplinaire couvrant le développement logiciel, l'administration réseau, la sécurité informatique et les systèmes d'exploitation. Acquisition de compétences en programmation (Java, Python, C++), bases de données, réseaux informatiques et cybersécurité.</p>
+            </div>
+            
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-caveat font-medium text-xl text-blue-600 mb-1">2021 - 2023</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <h3 class="text-xl font-semibold text-gray-800">Baccalauréat Scientifique</h3>
+                </div>
+                <div class="text-gray-600 mb-4">Lycée Louis Pasteur - Paris</div>
+                <p class="text-gray-600">Option Sciences de l'Ingénieur, spécialité Mathématiques. Mention Très Bien. Projet de terminale : développement d'une application mobile de gestion des notes avec Java et Android Studio.</p>
+            </div>
+            
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-caveat font-medium text-xl text-blue-600 mb-1">Été 2023</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <h3 class="text-xl font-semibold text-gray-800">Stage en entreprise</h3>
+                </div>
+                <div class="text-gray-600 mb-4">Société TechSolutions - Paris</div>
+                <p class="text-gray-600">Stage de 6 semaines en tant qu'assistant administrateur réseau. Participation à la maintenance du parc informatique, assistance aux utilisateurs et initiation à la sécurité des systèmes d'information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contactez-moi</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Disponible pour des opportunités</h3>
+                    <p class="text-gray-600 mb-8">Je suis actuellement à la recherche de stages, projets collaboratifs ou opportunités professionnelles dans le domaine du génie logiciel, des réseaux et systèmes. N'hésitez pas à me contacter pour discuter de projets ou d'opportunités.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Adresse</h4>
+                                <p class="text-gray-600">123 Rue de la Technologie, 75015 Paris</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">jean.dupont@email.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Téléphone</h4>
+                                <p class="text-gray-600">+33 6 12 34 56 78</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-white">Portfolio</a>
+                    <p class="text-gray-400 mt-2">Étudiant en Génie Logiciel, Réseaux et Systèmes</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Portfolio Étudiant. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Conditions d'utilisation</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
