@@ -147,7 +147,7 @@ function createMobileMenu() {
                 background: none;
                 border: none;
                 font-size: 1.5rem;
-                color: #4285f4;
+                color: #764ba2;
                 cursor: pointer;
             `;
             
@@ -226,7 +226,7 @@ function createParticles() {
 const style = document.createElement('style');
 style.textContent = `
     .nav-links a.active {
-        color: #4285f4;
+        color: #090e22;
         font-weight: 600;
     }
     

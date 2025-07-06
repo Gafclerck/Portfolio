@@ -30,16 +30,16 @@ body {
     align-items: center;
     padding: 0 2rem;
 }
-
-.logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #4285f4;
+.logo{
+    width: 4rem;
+}
+.logo img{
+    width: 80%;
 }
 
 .nav-links {
     display: flex;
-    list-style: none;
+    list-style:none;
     gap: 2rem;
 }
 
@@ -51,14 +51,14 @@ body {
 }
 
 .nav-links a:hover {
-    color: #4285f4;
+    color: #764ba2;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #090e22 0%, #764ba2 100%);
     color: white;
-    padding: 8rem 2rem 4rem;
+    padding: 8rem 2rem 0rem;
     margin-top: 80px;
 }
 
@@ -67,8 +67,8 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
+    justify-content: space-around;
+    gap: 2rem;
 }
 
 .hero-text h1 {
@@ -101,7 +101,7 @@ body {
 
 .btn-primary {
     background: white;
-    color: #667eea;
+    color: #0b1338;
 }
 
 .btn-secondary {
@@ -110,22 +110,32 @@ body {
     border: 2px solid white;
 }
 
+.btn-tertiary{
+    background: transparent;
+    color: #0b1338;
+    border: 2px solid #0b1338;
+}
+
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.hero-text{
+    width: 55%;
+}
+
 .hero-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid rgba(255,255,255,0.3);
+   width: 45%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .hero-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -158,7 +168,7 @@ body {
 }
 
 .about-image {
-    width: 250px;
+    width: 300px;
     height: 300px;
     border-radius: 10px;
     overflow: hidden;
@@ -215,7 +225,7 @@ body {
 .skill-icon {
     width: 60px;
     height: 60px;
-    background: #4285f4;
+    background: #0b1338;
     border-radius: 50%;
     margin: 0 auto 1rem;
     display: flex;
@@ -248,7 +258,7 @@ body {
 
 .skill-progress {
     height: 100%;
-    background: #4285f4;
+    background: #0b1338;
     border-radius: 4px;
     transition: width 2s ease;
 }
@@ -276,7 +286,7 @@ body {
 .tech-icon-img {
     width: 50px;
     height: 50px;
-    background: #4285f4;
+    background: #0b1338;
     border-radius: 50%;
     margin: 0 auto 1rem;
     display: flex;
@@ -308,7 +318,7 @@ body {
 .project-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, #0b1338, #764ba2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -338,7 +348,7 @@ body {
 }
 
 .project-link {
-    color: #4285f4;
+    color: #0b1338;
     text-decoration: none;
     font-weight: 600;
 }
@@ -360,7 +370,7 @@ body {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: #4285f4;
+    background: #764ba2;
 }
 
 .timeline-item {
@@ -376,12 +386,12 @@ body {
     top: 0;
     width: 12px;
     height: 12px;
-    background: #4285f4;
+    background: #764ba2;
     border-radius: 50%;
 }
 
 .timeline-year {
-    color: #4285f4;
+    color: #764ba2;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
@@ -457,7 +467,7 @@ body {
 
 .contact-info-item h4 {
     margin-bottom: 0.5rem;
-    color: #4285f4;
+    color: #764ba2;
 }
 
 /* Footer */
@@ -479,6 +489,9 @@ body {
         text-align: center;
     }
 
+    .hero-image , .hero-text{
+        width: 80%;
+    }
     .hero-text h1 {
         font-size: 2rem;
     }
