@@ -202,6 +202,9 @@ body {
 
 .social-buttons {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -209,7 +212,7 @@ body {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
