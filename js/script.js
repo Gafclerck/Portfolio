@@ -222,11 +222,11 @@ function createParticles() {
     }
 }
 
-// Ajout des keyframes pour l'animation des particules
+// Ajout des keyframes pour l'animation des particules  
 const style = document.createElement('style');
 style.textContent = `
     .nav-links a.active {
-        color: #090e22;
+        color: #be7ffeff;
         font-weight: 600;
     }
     
