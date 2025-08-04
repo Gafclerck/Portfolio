@@ -105,6 +105,10 @@ body {
     color: #ffffff;
 }
 
+form button{
+    background: #ffffff;
+    color: #1d0722;
+}
 .btn-secondary {
     background: transparent;
     color: white;
