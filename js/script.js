@@ -54,6 +54,7 @@ document.querySelectorAll('.project-card, .timeline-item, .tech-icon').forEach(e
 
 // Gestion du formulaire de contact
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    
     e.preventDefault();
     
     const formData = new FormData(this);
@@ -181,26 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Redimensionnement de la fenêtre
 window.addEventListener('resize', createMobileMenu);
 
-// Easter egg - Konami Code
-let konamiCode = [];
-const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-
-document.addEventListener('keydown', (e) => {
-    konamiCode.push(e.keyCode);
-    if (konamiCode.length > konamiSequence.length) {
-        konamiCode.shift();
-    }
-    
-    if (konamiCode.join(',') === konamiSequence.join(',')) {
-        document.body.style.transform = 'rotate(1deg)';
-        setTimeout(() => {
-            document.body.style.transform = 'rotate(0deg)';
-            alert('🎉 Easter egg trouvé ! Vous êtes un vrai geek !');
-        }, 1000);
-        konamiCode = [];
-    }
-});
-
 // Particules flottantes (effet visuel)
 function createParticles() {
     const hero = document.querySelector('.hero');
@@ -221,6 +202,23 @@ function createParticles() {
         hero.appendChild(particle);
     }
 }
+
+backtoTop = document.querySelector("#back-to-top")
+
+window.addEventListener("scroll" , ()=>{
+    if (window.scrollY > 200){
+        backtoTop.style.display = "block"
+    }else{
+        backtoTop.style.display = "none"
+    }
+})
+
+backtoTop.addEventListener("click" , ()=>{
+    window.scrollTo({
+        top : 0,
+        behavior: "smooth"
+    })
+})
 
 // Ajout des keyframes pour l'animation des particules  
 const style = document.createElement('style');

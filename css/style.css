@@ -486,6 +486,22 @@ form button{
     padding: 2rem;
 }
 
+#back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    display: none; /* caché par défaut */
+    border: none;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: opacity 0.3s;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
